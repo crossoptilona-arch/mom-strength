@@ -66,6 +66,7 @@ body {
     grid-template-areas: "topbar" "main";
   }
   .sidebar { display: none; }
+  .main { padding-bottom: 80px; } /* space for bottom nav */
 }
 
 /* ── TOP BAR ─────────────────────────────────────────────────── */
@@ -874,6 +875,115 @@ body {
 .tag-green { background: var(--green-lt); color: var(--green); border: 1px solid #a8d8a8; }
 .tag-orange { background: var(--orange-lt); color: var(--orange); border: 1px solid #e8c0a0; }
 
+/* ── BOTTOM NAV (mobile only) ─────────────────────────────────── */
+.bottom-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -4px 16px rgba(27,58,107,0.10);
+    z-index: 200;
+    align-items: stretch;
+  }
+
+  .bottom-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 6px 2px;
+    transition: var(--transition);
+    border-top: 2px solid transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .bottom-nav-item:active { background: var(--mist); }
+
+  .bottom-nav-item.active {
+    border-top-color: var(--teal);
+    background: var(--teal-lt);
+  }
+
+  .bottom-nav-item.active .bnav-label { color: var(--teal); font-weight: 700; }
+  .bottom-nav-item.active .bnav-icon { color: var(--teal); }
+
+  .bnav-icon {
+    font-size: 1.3rem;
+    color: #889aaa;
+    line-height: 1;
+  }
+
+  .bnav-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    color: #889aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  /* More menu overlay */
+  .more-menu {
+    display: none;
+    position: fixed;
+    bottom: 64px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -8px 24px rgba(27,58,107,0.14);
+    z-index: 199;
+    padding: 8px 0;
+  }
+
+  .more-menu.open { display: block; }
+
+  .more-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 24px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #334455;
+    font-weight: 500;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    transition: var(--transition);
+  }
+
+  .more-menu-item:active { background: var(--mist); }
+  .more-menu-item .menu-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .more-menu-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 198;
+  }
+  .more-menu-backdrop.open { display: block; }
+}
+
 /* ── TOAST ────────────────────────────────────────────────────── */
 .toast {
   position: fixed;
@@ -1260,29 +1370,30 @@ body {
       <div class="warmup-content" id="warmup-b">
         <div class="warmup-step"><div class="warmup-num">1</div><div><h4>March in Place — 2 minutes</h4><p>Same as Day A. Begin every session here.</p></div></div>
         <div class="warmup-step"><div class="warmup-num">2</div><div><h4>Cat-Cow — 10 slow reps</h4><p>On hands and knees. Arch back upward like a cat (chin to chest), hold 2s. Lower belly toward floor, lift head and tailbone (cow), hold 2s. Alternate 10 times. Mobilizes thoracic spine before rowing.</p></div></div>
-        <div class="warmup-step"><div class="warmup-num">3</div><div><h4>Hip Hinge Practice — 8 slow reps (no weight)</h4><p>Feet hip-width, hands on lower back. Push hips straight back, keeping back flat, until you feel a slight hamstring stretch. Return to standing. Warms the exact movement you'll load with the RDL.</p></div></div>
+        <div class="warmup-step"><div class="warmup-num">3</div><div><h4>Glute Bridge Warm-Up — 8 slow reps (no resistance)</h4><p>Lie on your back, knees bent, feet flat. Press through feet and lift hips until body forms a straight line shoulder to knee. Hold 1 second at top. Lower slowly. These rehearsal reps prepare your glutes and hips for the loaded bridges ahead. Focus on feeling your glutes do the work — not your lower back.</p></div></div>
         <div class="warmup-step"><div class="warmup-num">4</div><div><h4>Thoracic Rotation — 8 each side</h4><p>Sit in a chair, feet flat, arms crossed over chest. Keeping hips forward, rotate upper body to the right as far as comfortable. Hold 2s. Return. Rotate left. Prepares upper back for rowing.</p></div></div>
-        <div class="warmup-step"><div class="warmup-num">5</div><div><h4>Hamstring Stretch — 20 seconds each side</h4><p>Sit on edge of chair. Extend one leg straight, heel on floor, toes up. Sit tall and lean very slightly forward from your hip (not waist) until you feel a gentle stretch behind the knee. Hold 20s. Switch.</p></div></div>
+        <div class="warmup-step"><div class="warmup-num">5</div><div><h4>Seated Hip Abduction Warm-Up — 10 slow reps</h4><p>Sit tall in a chair, knees hip-width apart. Place hands on the outsides of your thighs just above the knees. Gently push your knees outward against your hands — hold 2 seconds, release. Activates the gluteus medius, the hip stabilizer critical for safe walking after hip replacement.</p></div></div>
       </div>
 
-      <!-- EXERCISE B1: RDL -->
+      <!-- EXERCISE B1: GLUTE BRIDGE -->
       <div class="exercise-block">
         <div class="exercise-header" style="background: linear-gradient(90deg, #1B5E20, #2E7D32);">
           <span class="ex-num">B1</span>
-          <span class="ex-name">Romanian Deadlift (RDL)</span>
-          <span class="ex-meta">3 sets · 10-12 reps · 75s rest</span>
+          <span class="ex-name">Glute Bridge</span>
+          <span class="ex-meta">3 sets · 12-15 reps · 75s rest</span>
         </div>
         <div class="exercise-body">
           <button class="instructions-toggle" onclick="toggleInstructions('b1')">How to do it <span class="chevron">▼</span></button>
           <div class="instructions-content" id="instr-b1">
-            <div class="instruction-step"><span class="step-num">1</span><span>Stand feet hip-width, dumbbells held in front of thighs, palms facing body.</span></div>
-            <div class="instruction-step"><span class="step-num">2</span><span>Breathe in. Brace core gently — like bracing for a light tap to the stomach.</span></div>
-            <div class="instruction-step"><span class="step-num">3</span><span>With a very slight knee bend (stays fixed), push hips STRAIGHT BACK. This is a hinge, not a squat. Imagine a rope pulling you backward from the waist.</span></div>
-            <div class="instruction-step"><span class="step-num">4</span><span>Dumbbells travel straight down the front of your legs, close to your body throughout.</span></div>
-            <div class="instruction-step"><span class="step-num">5</span><span>Lower until you feel a distinct hamstring stretch — usually mid-shin. STOP. Do not round your lower back.</span></div>
-            <div class="instruction-step"><span class="step-num">6</span><span>Drive hips forward to standing, squeezing glutes as you rise. Exhale as you stand.</span></div>
-            <div class="instruction-step"><span class="step-num">7</span><span>Stand fully tall, shoulders back, before the next rep.</span></div>
-            <div class="safety-tip"><strong>Safety:</strong> This is the most important exercise for fall prevention. If your lower back hurts, you are rounding your back or going too deep. Reduce range of motion — only hinge as far as your back stays completely flat.</div>
+            <div class="why-note">Replaces Romanian Deadlift. The RDL requires deep hip flexion which is not recommended after hip replacement. The Glute Bridge trains the same muscles — glutes, hamstrings, hip extensors — with zero hip flexion past 90 degrees. It is the single best hip-replacement-safe posterior chain exercise available.</div>
+            <div class="instruction-step"><span class="step-num">1</span><span>Lie on your back on a mat, knees bent, feet flat on the floor hip-width apart. Arms at your sides, palms facing down.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Breathe in. Press your feet firmly and evenly into the floor — do not let heels or toes lift.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>Squeeze your glutes and press your hips upward until your body forms a straight line from shoulders to knees. Weight is on your shoulders and feet — not your neck.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>Hold at the top for 2 full seconds. Feel this in your glutes and backs of thighs — not your lower back. If you feel it in your lower back, your hips are going too high.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>Slowly lower hips over 2-3 seconds. Do not let them drop.</span></div>
+            <div class="instruction-step"><span class="step-num">6</span><span>Lightly touch the floor — do not rest — and immediately lift again.</span></div>
+            <div class="instruction-step"><span class="step-num">7</span><span>Progression: Weeks 1-2 bodyweight only. Weeks 3-4 add a light resistance band just above the knees, pushing outward as you bridge. Weeks 5+ rest a light dumbbell across your hips (hold it in place with both hands).</span></div>
+            <div class="safety-tip"><strong>Hip replacement note:</strong> This exercise keeps the hip in a neutral or slightly extended position — the opposite of flexion. Stop immediately if you feel any groin pain or a sensation of the hip feeling unstable.</div>
           </div>
           <div class="log-panel">
             <div class="log-panel-header">
@@ -1290,12 +1401,12 @@ body {
               <span class="prev-weight-badge" id="prev-b1">No previous data</span>
             </div>
             <div class="sets-grid">
-              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="b1-s1-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b1-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
-              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="b1-s2-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b1-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
-              <div class="set-entry"><div class="set-label">Set 3</div><div class="set-inputs"><div><input class="set-input" id="b1-s3-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b1-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="b1-s1-w" type="text" placeholder="BW/band"><div class="input-mini-label">weight</div></div><div><input class="set-input" id="b1-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="b1-s2-w" type="text" placeholder="BW/band"><div class="input-mini-label">weight</div></div><div><input class="set-input" id="b1-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 3</div><div class="set-inputs"><div><input class="set-input" id="b1-s3-w" type="text" placeholder="BW/band"><div class="input-mini-label">weight</div></div><div><input class="set-input" id="b1-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
             </div>
             <div class="effort-row"><span class="effort-label">Effort:</span><div class="effort-chips" id="effort-b1"><div class="effort-chip" onclick="selectEffort('b1',1)">1</div><div class="effort-chip" onclick="selectEffort('b1',2)">2</div><div class="effort-chip" onclick="selectEffort('b1',3)">3</div><div class="effort-chip" onclick="selectEffort('b1',4)">4</div><div class="effort-chip" onclick="selectEffort('b1',5)">5</div><div class="effort-chip" onclick="selectEffort('b1',6)">6</div><div class="effort-chip" onclick="selectEffort('b1',7)">7</div><div class="effort-chip" onclick="selectEffort('b1',8)">8</div><div class="effort-chip" onclick="selectEffort('b1',9)">9</div></div></div>
-            <button class="save-set-btn" id="save-b1" onclick="saveExercise('b1')">Save RDL</button>
+            <button class="save-set-btn" id="save-b1" onclick="saveExercise('b1')">Save Glute Bridge</button>
           </div>
         </div>
       </div>
@@ -1346,7 +1457,7 @@ body {
           <div class="instructions-content" id="instr-b3">
             <div class="why-note">Kickback replaces overhead extension. Same tricep training, zero shoulder stress — a better default for this age group. Overhead extension can compress shoulder structures.</div>
             <div class="instruction-step"><span class="step-num">1</span><span>Stand next to a sturdy chair. Left hand flat on surface for support. Dumbbell in right hand.</span></div>
-            <div class="instruction-step"><span class="step-num">2</span><span>Hinge forward slightly at hips — torso at roughly 45°. Same hip hinge from the RDL, but partial.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Hinge forward slightly at the hips so your torso is at roughly 45°. Hand on the chair for support, back flat.</span></div>
             <div class="instruction-step"><span class="step-num">3</span><span>Tuck right upper arm firmly against your side, elbow bent 90°. Upper arm does not move.</span></div>
             <div class="instruction-step"><span class="step-num">4</span><span>Extend elbow until arm is completely straight behind you. Pause one second.</span></div>
             <div class="instruction-step"><span class="step-num">5</span><span>Slowly bend the elbow to return. Control it for 2 seconds — do not let forearm drop.</span></div>
@@ -1410,8 +1521,9 @@ body {
         </div>
         <div class="card-body">
           <div style="margin-bottom:14px">
-            <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 1: Seated Marching — 30 seconds</h4>
-            <p style="font-size:0.85rem; color:#445566; line-height:1.55;">Sit tall in chair, feet flat, hands lightly on thighs. Lift alternate knees toward chest, one at a time. Keep back straight — do not slouch as it continues. Builds hip flexor strength essential for walking and stairs.</p>
+            <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 1: Seated Hip Abduction with Band — 15 reps</h4>
+            <p style="font-size:0.85rem; color:#445566; line-height:1.55;">Sit tall in a chair, feet flat, knees hip-width apart. Place a light resistance band just above both knees. Push knees outward against the band as wide as comfortable — hold 2 seconds, then slowly bring them back together. Keep your back upright throughout. Trains the gluteus medius, the hip stabilizer critical for safe walking after hip replacement. No band? Place hands on the outsides of your thighs and push outward against your own hand resistance.</p>
+            <p style="font-size:0.82rem; color:var(--teal); font-style:italic; margin-top:6px;">Progression: move to a heavier band when 15 reps feel easy.</p>
           </div>
           <div style="margin-bottom:14px">
             <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 2: Glute Bridge — 12-15 reps</h4>
@@ -1616,7 +1728,7 @@ body {
               </ul>
             </div>
             <div class="info-card" style="background:var(--green-lt); border-color:#a8d8a8;">
-              <h3>Lower Body (Squat, RDL, Calf Raise)</h3>
+              <h3>Lower Body (Squat, Glute Bridge, Calf Raise)</h3>
               <ul>
                 <li>Maximum increase: +2-3 lbs at a time</li>
                 <li>Calf raises: progress from two-foot to single-leg rather than adding weight</li>
@@ -1637,7 +1749,7 @@ body {
                 <tr><td><strong>1-2</strong></td><td><span class="tag tag-teal">Learn</span></td><td>Establish starting weights. Form only. Effort 5-6. When in doubt, go lighter.</td><td>Chair-supported single-leg stand for 10 seconds each side.</td></tr>
                 <tr><td><strong>3-4</strong></td><td><span class="tag tag-navy">Build</span></td><td>Add weight on any exercise where all sets felt easy (effort below 6). Effort target 6-7.</td><td>Reduce chair touch to fingertips only.</td></tr>
                 <tr><td><strong>5-6</strong></td><td><span class="tag tag-green">Push</span></td><td>Last rep of each set should be genuinely challenging — you could not do 3 more with good form. Effort 7-8.</td><td>15 seconds single-leg stand with one finger. Tandem stance 20+ seconds.</td></tr>
-                <tr><td><strong>7</strong></td><td><span class="tag tag-orange">Test</span></td><td>Try heavier weights on squat, RDL, rows. Upper body: no more than +2 lbs. Legs: +3 lbs max.</td><td>Attempt 10 seconds single-leg stand with no support. Chair within reach.</td></tr>
+                <tr><td><strong>7</strong></td><td><span class="tag tag-orange">Test</span></td><td>Try heavier weights on squat, glute bridge, and rows. Upper body: no more than +2 lbs. Legs: +3 lbs max.</td><td>Attempt 10 seconds single-leg stand with no support. Chair within reach.</td></tr>
                 <tr><td><strong>8</strong></td><td><span class="tag" style="background:var(--red-lt);color:var(--red);border:1px solid #e0a0a0">Deload</span></td><td>Reduce ALL weights 20%. Do only 2 sets per exercise. You are recovering to come back stronger.</td><td>Balance exercises at full difficulty. This is active rest, not reduced intensity on balance.</td></tr>
               </tbody>
             </table>
@@ -1679,6 +1791,53 @@ body {
 
   </main>
 </div>
+
+<!-- BOTTOM NAV (mobile only) -->
+<div class="more-menu-backdrop" id="more-backdrop" onclick="closeMoreMenu()"></div>
+
+<div class="more-menu" id="more-menu">
+  <button class="more-menu-item" onclick="showPage('schedule'); closeMoreMenu()">
+    <span class="menu-dot" style="background:var(--navy)"></span> Weekly Schedule
+  </button>
+  <button class="more-menu-item" onclick="showPage('cardio'); closeMoreMenu()">
+    <span class="menu-dot" style="background:var(--orange)"></span> Cardio Guide
+  </button>
+  <button class="more-menu-item" onclick="showPage('progress'); closeMoreMenu()">
+    <span class="menu-dot" style="background:var(--gold)"></span> Progress Log
+  </button>
+  <button class="more-menu-item" onclick="showPage('safety'); closeMoreMenu()">
+    <span class="menu-dot" style="background:#aaa"></span> Know When to Stop
+  </button>
+  <button class="more-menu-item" onclick="showPage('progression'); closeMoreMenu()">
+    <span class="menu-dot" style="background:#aaa"></span> Progression Guide
+  </button>
+  <button class="more-menu-item" onclick="showPage('recovery'); closeMoreMenu()">
+    <span class="menu-dot" style="background:#aaa"></span> Recovery & Nutrition
+  </button>
+</div>
+
+<nav class="bottom-nav" id="bottom-nav">
+  <button class="bottom-nav-item active" id="bnav-day-a" onclick="showPage('day-a')">
+    <span class="bnav-icon">💪</span>
+    <span class="bnav-label">Day A</span>
+  </button>
+  <button class="bottom-nav-item" id="bnav-day-b" onclick="showPage('day-b')">
+    <span class="bnav-icon">🏋️</span>
+    <span class="bnav-label">Day B</span>
+  </button>
+  <button class="bottom-nav-item" id="bnav-schedule" onclick="showPage('schedule')">
+    <span class="bnav-icon">📅</span>
+    <span class="bnav-label">Schedule</span>
+  </button>
+  <button class="bottom-nav-item" id="bnav-progress" onclick="showPage('progress')">
+    <span class="bnav-icon">📊</span>
+    <span class="bnav-label">Progress</span>
+  </button>
+  <button class="bottom-nav-item" id="bnav-more" onclick="toggleMoreMenu()">
+    <span class="bnav-icon">☰</span>
+    <span class="bnav-label">More</span>
+  </button>
+</nav>
 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
@@ -1752,7 +1911,7 @@ const WEEK_PHASES = {
 
 const EXERCISE_NAMES = {
   a1: 'Squat', a2: 'Chest Press', a3: 'Band Pull-Apart', a4: 'Calf Raise',
-  b1: 'Romanian Deadlift', b2: 'Bicep Curl', b3: 'Tricep Kickback', b4: 'Bent-Over Row'
+  b1: 'Glute Bridge', b2: 'Bicep Curl', b3: 'Tricep Kickback', b4: 'Bent-Over Row'
 };
 
 // ── STORAGE KEY ────────────────────────────────────────────────
@@ -1766,11 +1925,43 @@ function showPage(pageId) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   const page = document.getElementById('page-' + pageId);
   if (page) page.classList.add('active');
-  const navMap = { 'day-a': 'day-a', 'day-b': 'day-b', schedule: 'schedule', cardio: 'cardio', progress: 'progress', safety: 'info', progression: 'info', recovery: 'info' };
   document.querySelectorAll('.nav-item').forEach(n => {
     if (n.getAttribute('onclick') && n.getAttribute('onclick').includes(`'${pageId}'`)) n.classList.add('active');
   });
+
+  // Sync bottom nav active state
+  document.querySelectorAll('.bottom-nav-item').forEach(b => b.classList.remove('active'));
+  const bnavMap = {
+    'day-a': 'bnav-day-a',
+    'day-b': 'bnav-day-b',
+    'schedule': 'bnav-schedule',
+    'progress': 'bnav-progress',
+  };
+  const bnavId = bnavMap[pageId];
+  if (bnavId) {
+    const bnavEl = document.getElementById(bnavId);
+    if (bnavEl) bnavEl.classList.add('active');
+  } else {
+    // Pages reached via More menu — highlight the More button
+    const moreBtn = document.getElementById('bnav-more');
+    if (moreBtn) moreBtn.classList.add('active');
+  }
+
   if (pageId === 'progress') refreshProgressTable();
+}
+
+// ── MORE MENU ──────────────────────────────────────────────────
+function toggleMoreMenu() {
+  const menu = document.getElementById('more-menu');
+  const backdrop = document.getElementById('more-backdrop');
+  const isOpen = menu.classList.contains('open');
+  menu.classList.toggle('open', !isOpen);
+  backdrop.classList.toggle('open', !isOpen);
+}
+
+function closeMoreMenu() {
+  document.getElementById('more-menu').classList.remove('open');
+  document.getElementById('more-backdrop').classList.remove('open');
 }
 
 // ── WEEK NAVIGATION ────────────────────────────────────────────
