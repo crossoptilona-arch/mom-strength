@@ -1,121 +1,2009 @@
-Strength & Balance
-Block 1 ·
-Week 1
-⬇ Export Progress
-WORKOUTS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strength & Balance — Your Training Program</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & VARIABLES ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-Day A — Monday
+:root {
+  --navy:      #1B3A6B;
+  --teal:      #2E8B8B;
+  --teal-lt:   #E0F2F2;
+  --gold:      #B8860B;
+  --gold-lt:   #FFF8E7;
+  --green:     #2E7D32;
+  --green-lt:  #E8F5E9;
+  --red:       #B71C1C;
+  --red-lt:    #FFEBEE;
+  --orange:    #E65100;
+  --orange-lt: #FFF3E0;
+  --purple:    #4A148C;
+  --purple-lt: #F3E5F5;
+  --ink:       #1a1a2e;
+  --mist:      #f4f6f9;
+  --border:    #dde3ec;
+  --white:     #ffffff;
+  --shadow-sm: 0 2px 8px rgba(27,58,107,0.08);
+  --shadow-md: 0 6px 24px rgba(27,58,107,0.12);
+  --shadow-lg: 0 16px 48px rgba(27,58,107,0.16);
+  --radius:    12px;
+  --radius-sm: 8px;
+  --serif:     'DM Serif Display', Georgia, serif;
+  --sans:      'DM Sans', system-ui, sans-serif;
+  --mono:      'DM Mono', monospace;
+  --transition: 0.2s cubic-bezier(0.4,0,0.2,1);
+}
 
-Day B — Saturday
+html { scroll-behavior: smooth; }
 
-YOUR PROGRAM
+body {
+  font-family: var(--sans);
+  background: var(--mist);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
-Weekly Schedule
+/* ── LAYOUT ──────────────────────────────────────────────────── */
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: "topbar topbar" "sidebar main";
+  min-height: 100vh;
+}
 
-Cardio Guide
+@media (max-width: 768px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "topbar" "main";
+  }
+  .sidebar { display: none; }
+}
 
-TRACKING
+/* ── TOP BAR ─────────────────────────────────────────────────── */
+.topbar {
+  grid-area: topbar;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
 
-Progress Log
+.topbar-brand {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
 
-REFERENCE
+.topbar-brand span {
+  color: #7ecfcf;
+  font-style: italic;
+}
 
-Know When to Stop
+.topbar-week {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #a8c8e8;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
 
-Progression Guide
+.week-badge {
+  background: rgba(46,139,139,0.3);
+  border: 1px solid rgba(46,139,139,0.6);
+  color: #7ecfcf;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
 
-Recovery & Nutrition
-Day A — Monday
-Lower Body · Upper Push · Balance · ~38 minutes
-← Prev
-Week 1
-FOUNDATION · LEARN
-Next →
-▶ DAY A WARM-UP — 8 minutes (tap to expand)
-▼
-A1
-Squat
-3 sets · 10-12 reps · 75s rest
-HOW TO DO IT
-▼
-LOG YOUR SETS
-No previous data
-SET 1
-lbs
-reps
-SET 2
-lbs
-reps
-SET 3
-lbs
-reps
-Effort:
-1 2 3 4 5 6 7 8 9 Save Squat
-A2
-Dumbbell Chest Press
-3 sets · 10-12 reps · 75s rest
-HOW TO DO IT
-▼
-LOG YOUR SETS
-No previous data
-SET 1
-lbs
-reps
-SET 2
-lbs
-reps
-SET 3
-lbs
-reps
-Effort:
-123456789 Save Chest Press
-A3
-Band Pull-Apart
-2 sets · 12-15 reps · 45s rest
-HOW TO DO IT
-▼
-LOG YOUR SETS
-No previous data
-SET 1
-band
-reps
-SET 2
-band
-reps
-SET 3 (OPTIONAL)
-band
-reps
-Effort:
-123456789 Save Band Pull-Apart
-A4
-Calf Raise
-3 sets · 15 reps · 60s rest
-HOW TO DO IT
-▼
-LOG YOUR SETS
-No previous data
-SET 1
-weight
-reps
-SET 2
-weight
-reps
-SET 3
-weight
-reps
-Effort:
-123456789 Save Calf Raise
-A5 · Balance Circuit
-2 ROUNDS · 30S REST BETWEEN EXERCISES
-Structure: Do Exercise 1 → rest 30s → Exercise 2 → rest 30s → Exercise 3 → rest 60s → repeat round.
-Exercise 1: Tandem Stance — 20-30 seconds each foot
-Stand near a chair. One foot directly in front of the other, heel touching toe. Fix gaze on a point straight ahead — stable gaze dramatically improves balance. Hold 20-30 seconds each foot.
-Too easy: close eyes for 5-second intervals. Too hard: widen stance slightly.
-Exercise 2: Single-Leg Stand — 20-30 seconds each side
-Fingertips on chair only. Lift one foot slightly off the floor. Fix your gaze. Hold 20-30 seconds. Switch.
-Progression: two-finger → one-finger → hover → no touch. Move only when current level feels controlled.
-Exercise 3: Weight Shifts — 10 reps each direction
-Hands lightly on chair. Slowly shift weight to right foot until left foot lightens. Hold 3 seconds. Shift left. Repeat.
-Progress to actually lifting the unloaded foot 1-2 inches off the ground.
-Safety rule: Always have a chair, wall, or counter within one arm's reach. Touch support the instant you feel unsteady. There is no benefit to falling.
+.topbar-actions { display: flex; gap: 8px; }
 
+.btn-icon {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #a8c8e8;
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-icon:hover { background: rgba(255,255,255,0.14); color: #fff; }
+
+/* ── SIDEBAR ─────────────────────────────────────────────────── */
+.sidebar {
+  grid-area: sidebar;
+  background: var(--white);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  position: sticky;
+  top: 60px;
+  height: calc(100vh - 60px);
+}
+
+.sidebar-section {
+  padding: 16px 16px 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8899aa;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+  font-size: 0.9rem;
+  color: #445566;
+  font-weight: 400;
+}
+
+.nav-item:hover {
+  background: var(--mist);
+  color: var(--navy);
+  border-left-color: var(--border);
+}
+
+.nav-item.active {
+  background: #EEF4FF;
+  color: var(--navy);
+  border-left-color: var(--navy);
+  font-weight: 600;
+}
+
+.nav-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nav-item.day-a .nav-dot { background: var(--teal); }
+.nav-item.day-b .nav-dot { background: var(--green); }
+.nav-item.schedule .nav-dot { background: var(--navy); }
+.nav-item.cardio .nav-dot { background: var(--orange); }
+.nav-item.progress .nav-dot { background: var(--gold); }
+.nav-item.info .nav-dot { background: #aaa; }
+
+.sidebar-divider {
+  margin: 8px 16px;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* ── MAIN CONTENT ─────────────────────────────────────────────── */
+.main {
+  grid-area: main;
+  overflow-y: auto;
+  padding: 32px;
+}
+
+@media (max-width: 600px) { .main { padding: 16px; } }
+
+/* ── PAGES ────────────────────────────────────────────────────── */
+.page { display: none; animation: fadeIn 0.25s ease; }
+.page.active { display: block; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ── PAGE HEADERS ─────────────────────────────────────────────── */
+.page-header {
+  background: linear-gradient(135deg, var(--navy) 0%, #2a527a 100%);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.page-header.teal { background: linear-gradient(135deg, #1B6B6B 0%, var(--teal) 100%); }
+.page-header.green { background: linear-gradient(135deg, #1B4D1E 0%, var(--green) 100%); }
+.page-header.gold { background: linear-gradient(135deg, #6B4800 0%, var(--gold) 100%); }
+
+.page-title {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.page-subtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* ── CARDS ────────────────────────────────────────────────────── */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--navy);
+}
+
+.card-body { padding: 20px; }
+
+/* ── WARM-UP ACCORDION ─────────────────────────────────────────── */
+.warmup-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, var(--teal-lt), #f0fafa);
+  border: 1px solid #b2d8d8;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1B6B6B;
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+
+.warmup-toggle:hover { background: linear-gradient(90deg, #c8eaea, #e8f8f8); }
+
+.warmup-toggle .chevron {
+  font-size: 0.7rem;
+  transition: transform var(--transition);
+}
+
+.warmup-toggle.open .chevron { transform: rotate(180deg); }
+
+.warmup-content {
+  display: none;
+  background: #f8fdfd;
+  border: 1px solid #b2d8d8;
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.warmup-content.open { display: block; }
+
+.warmup-step {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d8eeed;
+}
+
+.warmup-step:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+.warmup-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.warmup-step h4 { font-size: 0.9rem; font-weight: 600; color: #1B6B6B; margin-bottom: 4px; }
+.warmup-step p { font-size: 0.85rem; color: #445566; line-height: 1.5; }
+
+/* ── EXERCISE BLOCKS ──────────────────────────────────────────── */
+.exercise-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.exercise-header {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ex-num {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.ex-name {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: #fff;
+  flex: 1;
+}
+
+.ex-meta {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.exercise-body {
+  background: var(--white);
+}
+
+/* Instructions accordion */
+.instructions-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #667788;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: var(--transition);
+}
+
+.instructions-toggle:hover { background: var(--mist); color: var(--navy); }
+.instructions-toggle .chevron { font-size: 0.65rem; transition: transform var(--transition); }
+.instructions-toggle.open .chevron { transform: rotate(180deg); }
+
+.instructions-content { display: none; padding: 16px 20px; }
+.instructions-content.open { display: block; }
+
+.instruction-step {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #334455;
+}
+
+.instruction-step:last-child { margin-bottom: 0; }
+
+.step-num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.safety-tip {
+  background: var(--orange-lt);
+  border-left: 3px solid var(--orange);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 10px 14px;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: #4a2000;
+  line-height: 1.5;
+}
+
+.safety-tip strong { color: var(--orange); }
+
+.why-note {
+  background: #f0f7ff;
+  border-left: 3px solid var(--teal);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 10px 14px;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: #1a3a4a;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* ── LOGGING PANEL ────────────────────────────────────────────── */
+.log-panel {
+  padding: 16px 20px 20px;
+  background: #fafbfd;
+  border-top: 1px solid var(--border);
+}
+
+.log-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.log-panel-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #667788;
+}
+
+.prev-weight-badge {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  background: #e8f0ff;
+  border: 1px solid #c0cfe8;
+  color: var(--navy);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.prev-weight-badge.empty { background: #f0f0f0; border-color: #ddd; color: #999; }
+
+.sets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.set-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.set-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #889aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.set-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.set-input {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: var(--white);
+  width: 100%;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.set-input:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(46,139,139,0.12);
+}
+
+.set-input::placeholder { color: #bcc8d8; font-weight: 400; }
+.input-mini-label { font-size: 0.65rem; color: #aabbcc; text-align: center; font-weight: 500; }
+
+.effort-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.effort-label { font-size: 0.8rem; color: #667788; font-weight: 500; white-space: nowrap; }
+
+.effort-chips {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.effort-chip {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #889aaa;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.effort-chip:hover { border-color: var(--teal); color: var(--teal); }
+
+.effort-chip.selected-low { border-color: var(--green); background: var(--green-lt); color: var(--green); }
+.effort-chip.selected-mid { border-color: var(--gold); background: var(--gold-lt); color: var(--gold); }
+.effort-chip.selected-high { border-color: var(--orange); background: var(--orange-lt); color: var(--orange); }
+
+.save-set-btn {
+  width: 100%;
+  background: var(--teal);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.02em;
+}
+
+.save-set-btn:hover { background: #1f6e6e; }
+.save-set-btn.saved { background: var(--green); }
+.save-set-btn.saved::before { content: '✓ '; }
+
+/* ── SCHEDULE PAGE ────────────────────────────────────────────── */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 700px) {
+  .week-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.day-card {
+  border-radius: var(--radius-sm);
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.day-name { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #889aaa; margin-bottom: 6px; }
+.day-type { font-size: 0.8rem; font-weight: 600; margin-bottom: 2px; }
+.day-note { font-size: 0.7rem; color: #889aaa; font-style: italic; }
+
+.day-card.strength-a { background: var(--teal-lt); border-color: #a8d8d8; }
+.day-card.strength-a .day-type { color: #1B6B6B; }
+.day-card.strength-b { background: var(--green-lt); border-color: #a8d8a8; }
+.day-card.strength-b .day-type { color: var(--green); }
+.day-card.gym-class { background: var(--purple-lt); border-color: #d0a8e8; }
+.day-card.gym-class .day-type { color: var(--purple); }
+.day-card.cardio { background: var(--orange-lt); border-color: #e8c8a8; }
+.day-card.cardio .day-type { color: var(--orange); }
+.day-card.rest { background: #f8f8f8; border-color: #e0e0e0; }
+.day-card.rest .day-type { color: #aaaaaa; }
+
+/* ── RECOVERY GAP BADGES ──────────────────────────────────────── */
+.gap-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.gap-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-lt);
+  border: 1px solid #b0d8b0;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.gap-badge::before { content: '✓'; font-size: 0.9rem; }
+
+/* ── INFO CARDS ───────────────────────────────────────────────── */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) { .info-grid { grid-template-columns: 1fr; } }
+
+.info-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.info-card h3 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.info-card ul { list-style: none; }
+
+.info-card li {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.87rem;
+  color: #334455;
+  line-height: 1.45;
+}
+
+.info-card li::before { content: '•'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+
+/* ── STOP SIGNALS ─────────────────────────────────────────────── */
+.stop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 700px) { .stop-grid { grid-template-columns: 1fr; } }
+
+.stop-card {
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+.stop-card.ok { background: var(--green-lt); border: 1px solid #b0d8b0; }
+.stop-card.warn { background: var(--gold-lt); border: 1px solid #d8c070; }
+.stop-card.danger { background: var(--red-lt); border: 1px solid #e0a0a0; }
+
+.stop-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; }
+.stop-card.ok h3 { color: var(--green); }
+.stop-card.warn h3 { color: var(--gold); }
+.stop-card.danger h3 { color: var(--red); }
+
+.stop-card li {
+  font-size: 0.82rem;
+  color: #334455;
+  margin-bottom: 6px;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.45;
+}
+
+.stop-card li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: #889aaa;
+}
+
+.stop-card p { font-size: 0.8rem; margin-top: 10px; font-style: italic; }
+.stop-card.ok p { color: var(--green); }
+.stop-card.warn p { color: var(--gold); }
+.stop-card.danger p { color: var(--red); }
+
+/* ── PROGRESS PAGE ────────────────────────────────────────────── */
+.progress-table-wrap { overflow-x: auto; }
+
+.progress-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.progress-table th {
+  background: var(--navy);
+  color: rgba(255,255,255,0.85);
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.progress-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: #334455;
+}
+
+.progress-table tr:nth-child(even) td { background: var(--mist); }
+.progress-table tr:hover td { background: #eef4ff; }
+
+.weight-cell {
+  font-family: var(--mono);
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.effort-cell {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+
+.effort-cell.low { color: var(--green); }
+.effort-cell.mid { color: var(--gold); }
+.effort-cell.high { color: var(--orange); }
+
+/* ── WEEK NAVIGATOR ───────────────────────────────────────────── */
+.week-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  margin-bottom: 24px;
+}
+
+.week-nav-btn {
+  background: var(--mist);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+  transition: var(--transition);
+}
+
+.week-nav-btn:hover { background: #dde8f8; border-color: #b0c8e8; }
+.week-nav-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.week-nav-info { flex: 1; text-align: center; }
+.week-nav-num { font-family: var(--serif); font-size: 1.3rem; color: var(--navy); }
+.week-nav-phase { font-size: 0.78rem; color: #889aaa; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.deload-banner {
+  background: var(--orange-lt);
+  border: 1px solid #e0b890;
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  color: #5a2800;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── DOWNLOAD BTN ─────────────────────────────────────────────── */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.download-btn:hover { background: #2a527a; }
+.download-btn svg { width: 16px; height: 16px; }
+
+/* ── TYPOGRAPHY HELPERS ───────────────────────────────────────── */
+.section-heading {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  color: var(--navy);
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.body-text { font-size: 0.9rem; color: #334455; line-height: 1.6; margin-bottom: 14px; }
+.body-text + .body-text { margin-top: -6px; }
+
+.tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tag-teal { background: var(--teal-lt); color: #1B6B6B; border: 1px solid #a8d8d8; }
+.tag-navy { background: #EEF4FF; color: var(--navy); border: 1px solid #c0d0e8; }
+.tag-green { background: var(--green-lt); color: var(--green); border: 1px solid #a8d8a8; }
+.tag-orange { background: var(--orange-lt); color: var(--orange); border: 1px solid #e8c0a0; }
+
+/* ── TOAST ────────────────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--green);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+  transform: translateY(80px);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 1000;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ── CARDIO PAGE ──────────────────────────────────────────────── */
+.cardio-zone {
+  background: linear-gradient(135deg, var(--orange-lt), #fff8f0);
+  border: 1px solid #e8c0a0;
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.cardio-zone h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--orange); margin-bottom: 10px; }
+
+.cardio-days {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 700px) { .cardio-days { grid-template-columns: 1fr; } }
+
+.cardio-day-card {
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+.cardio-day-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; }
+.cardio-day-card ul { list-style: none; }
+.cardio-day-card li { font-size: 0.83rem; color: #445566; margin-bottom: 5px; padding-left: 12px; position: relative; line-height: 1.4; }
+.cardio-day-card li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-size: 0.75rem; }
+
+</style>
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-brand">Strength <span>&amp; Balance</span></div>
+    <div class="topbar-week">
+      <span>Block 1 ·</span>
+      <span class="week-badge" id="topbar-week-label">Week 1</span>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn-icon" onclick="exportCSV()">⬇ Export Progress</button>
+    </div>
+  </header>
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <div class="sidebar-section">Workouts</div>
+    <div class="nav-item day-a active" onclick="showPage('day-a')">
+      <span class="nav-dot"></span> Day A — Monday
+    </div>
+    <div class="nav-item day-b" onclick="showPage('day-b')">
+      <span class="nav-dot"></span> Day B — Saturday
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">Your Program</div>
+    <div class="nav-item schedule" onclick="showPage('schedule')">
+      <span class="nav-dot"></span> Weekly Schedule
+    </div>
+    <div class="nav-item cardio" onclick="showPage('cardio')">
+      <span class="nav-dot"></span> Cardio Guide
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">Tracking</div>
+    <div class="nav-item progress" onclick="showPage('progress')">
+      <span class="nav-dot"></span> Progress Log
+    </div>
+    <hr class="sidebar-divider">
+    <div class="sidebar-section">Reference</div>
+    <div class="nav-item info" onclick="showPage('safety')">
+      <span class="nav-dot"></span> Know When to Stop
+    </div>
+    <div class="nav-item info" onclick="showPage('progression')">
+      <span class="nav-dot"></span> Progression Guide
+    </div>
+    <div class="nav-item info" onclick="showPage('recovery')">
+      <span class="nav-dot"></span> Recovery & Nutrition
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- ── PAGE: DAY A ─────────────────────────────────────── -->
+    <section class="page active" id="page-day-a">
+
+      <div class="page-header teal">
+        <div class="page-title">Day A — Monday</div>
+        <div class="page-subtitle">Lower Body · Upper Push · Balance  ·  ~38 minutes</div>
+      </div>
+
+      <!-- Week Navigator -->
+      <div class="week-nav">
+        <button class="week-nav-btn" id="prev-week-a" onclick="changeWeek(-1)">← Prev</button>
+        <div class="week-nav-info">
+          <div class="week-nav-num" id="week-display-a">Week 1</div>
+          <div class="week-nav-phase" id="phase-display-a">Foundation · Learn</div>
+        </div>
+        <button class="week-nav-btn" id="next-week-a" onclick="changeWeek(1)">Next →</button>
+      </div>
+
+      <div id="deload-banner-a" class="deload-banner" style="display:none">
+        ⚠️ DELOAD WEEK — Reduce all weights by 20%. Do only 2 sets per exercise. Focus on perfect form.
+      </div>
+
+      <!-- WARM-UP A -->
+      <button class="warmup-toggle" onclick="toggleWarmup('a')">
+        ▶ DAY A WARM-UP — 8 minutes (tap to expand) <span class="chevron">▼</span>
+      </button>
+      <div class="warmup-content" id="warmup-a">
+        <div class="warmup-step">
+          <div class="warmup-num">1</div>
+          <div><h4>March in Place — 2 minutes</h4><p>Walk in place, lifting your knees to hip height. Start slowly and build. Raises body temperature gently.</p></div>
+        </div>
+        <div class="warmup-step">
+          <div class="warmup-num">2</div>
+          <div><h4>Ankle Circles — 30 seconds each foot</h4><p>Sit in a chair. Lift one foot and draw large circles with your toes — 10 clockwise, 10 counterclockwise. Repeat other foot. Squatting loads the ankle; this prepares the joint.</p></div>
+        </div>
+        <div class="warmup-step">
+          <div class="warmup-num">3</div>
+          <div><h4>Hip Circles — 10 each direction</h4><p>Stand with hands on hips, feet shoulder-width. Circle your hips in a large oval, 10 times each way. Keep feet flat. Mobilizes the hip joint before loading with squats.</p></div>
+        </div>
+        <div class="warmup-step">
+          <div class="warmup-num">4</div>
+          <div><h4>Bodyweight Squat — 8 slow reps</h4><p>3 seconds down, 2 seconds up. No weight. Chest up, knees tracking over toes. These are rehearsal reps — if anything feels restricted or painful, note it before adding weight.</p></div>
+        </div>
+        <div class="warmup-step">
+          <div class="warmup-num">5</div>
+          <div><h4>Arm Circles — 10 each direction</h4><p>Arms extended to sides. 10 small circles forward and back, then 10 large circles forward and back. Warms the shoulder joint for the chest press.</p></div>
+        </div>
+        <div class="warmup-step">
+          <div class="warmup-num">6</div>
+          <div><h4>Wall Chest Stretch — 20 seconds each side</h4><p>Place your palm flat on a wall at shoulder height. Turn your body away until you feel a mild stretch across your chest and front shoulder. Hold 20 seconds each side.</p></div>
+        </div>
+      </div>
+
+      <!-- EXERCISE A1: SQUAT -->
+      <div class="exercise-block">
+        <div class="exercise-header" style="background: linear-gradient(90deg, #1B3A6B, #2a527a);">
+          <span class="ex-num">A1</span>
+          <span class="ex-name">Squat</span>
+          <span class="ex-meta">3 sets · 10-12 reps · 75s rest</span>
+        </div>
+        <div class="exercise-body">
+          <button class="instructions-toggle" onclick="toggleInstructions('a1')">
+            How to do it <span class="chevron">▼</span>
+          </button>
+          <div class="instructions-content" id="instr-a1">
+            <div class="instruction-step"><span class="step-num">1</span><span>Stand feet shoulder-width, toes turned out 10-15°. Hold dumbbells at sides or one in front of chest (goblet — easier on back and better for balance).</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Breathe in. Chest tall, shoulders back — do not round forward.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>Push hips BACK first, as if reaching for a chair behind you. Then bend your knees. This order matters.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>Lower until thighs parallel to floor, or as comfortable. Knees track in the same direction as your toes — do not let them cave inward.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>Pause one second at the bottom.</span></div>
+            <div class="instruction-step"><span class="step-num">6</span><span>Push through your whole foot — heel and ball equally. Rise to standing, exhale as you come up.</span></div>
+            <div class="instruction-step"><span class="step-num">7</span><span>Squeeze glutes at the top and stand fully tall before the next rep.</span></div>
+            <div class="safety-tip"><strong>Safety:</strong> Place a sturdy chair directly behind you in Weeks 1-2. Weeks 1-2: bodyweight only. Add weight when bodyweight feels controlled and easy for all 12 reps. Increase by 2-3 lbs at a time only.</div>
+          </div>
+          <div class="log-panel" id="log-a1">
+            <div class="log-panel-header">
+              <span class="log-panel-title">Log Your Sets</span>
+              <span class="prev-weight-badge" id="prev-a1">No previous data</span>
+            </div>
+            <div class="sets-grid">
+              <div class="set-entry">
+                <div class="set-label">Set 1</div>
+                <div class="set-inputs">
+                  <div><input class="set-input" id="a1-s1-w" type="number" placeholder="lbs" min="0" max="999"><div class="input-mini-label">lbs</div></div>
+                  <div><input class="set-input" id="a1-s1-r" type="number" placeholder="reps" min="0" max="99"><div class="input-mini-label">reps</div></div>
+                </div>
+              </div>
+              <div class="set-entry">
+                <div class="set-label">Set 2</div>
+                <div class="set-inputs">
+                  <div><input class="set-input" id="a1-s2-w" type="number" placeholder="lbs" min="0" max="999"><div class="input-mini-label">lbs</div></div>
+                  <div><input class="set-input" id="a1-s2-r" type="number" placeholder="reps" min="0" max="99"><div class="input-mini-label">reps</div></div>
+                </div>
+              </div>
+              <div class="set-entry">
+                <div class="set-label">Set 3</div>
+                <div class="set-inputs">
+                  <div><input class="set-input" id="a1-s3-w" type="number" placeholder="lbs" min="0" max="999"><div class="input-mini-label">lbs</div></div>
+                  <div><input class="set-input" id="a1-s3-r" type="number" placeholder="reps" min="0" max="99"><div class="input-mini-label">reps</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="effort-row">
+              <span class="effort-label">Effort:</span>
+              <div class="effort-chips" id="effort-a1">
+                <div class="effort-chip" onclick="selectEffort('a1',1)">1</div>
+                <div class="effort-chip" onclick="selectEffort('a1',2)">2</div>
+                <div class="effort-chip" onclick="selectEffort('a1',3)">3</div>
+                <div class="effort-chip" onclick="selectEffort('a1',4)">4</div>
+                <div class="effort-chip" onclick="selectEffort('a1',5)">5</div>
+                <div class="effort-chip" onclick="selectEffort('a1',6)">6</div>
+                <div class="effort-chip" onclick="selectEffort('a1',7)">7</div>
+                <div class="effort-chip" onclick="selectEffort('a1',8)">8</div>
+                <div class="effort-chip" onclick="selectEffort('a1',9)">9</div>
+              </div>
+            </div>
+            <button class="save-set-btn" id="save-a1" onclick="saveExercise('a1')">Save Squat</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE A2: CHEST PRESS -->
+      <div class="exercise-block">
+        <div class="exercise-header" style="background: linear-gradient(90deg, #1B6B6B, #2E8B8B);">
+          <span class="ex-num">A2</span>
+          <span class="ex-name">Dumbbell Chest Press</span>
+          <span class="ex-meta">3 sets · 10-12 reps · 75s rest</span>
+        </div>
+        <div class="exercise-body">
+          <button class="instructions-toggle" onclick="toggleInstructions('a2')">How to do it <span class="chevron">▼</span></button>
+          <div class="instructions-content" id="instr-a2">
+            <div class="instruction-step"><span class="step-num">1</span><span>Lie on your back on a mat or firm surface. Hold dumbbells on your thighs.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Press lower back gently into the mat. Small natural curve is fine — do not arch dramatically.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>Lift dumbbells to directly above your chest, palms facing your feet. Arms extended but not locked. Starting position.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>Slowly lower dumbbells outward and down, elbows at 45-60° from body. Lower until elbows reach chest level.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>Pause briefly, then press back up. Exhale as you push.</span></div>
+            <div class="instruction-step"><span class="step-num">6</span><span>Keep slight bend at top — never lock out. To finish: lower to thighs, sit up carefully.</span></div>
+            <div class="safety-tip"><strong>Safety:</strong> Start at 5-8 lbs per hand. Increase no more than 1-2 lbs at a time. If getting to the floor is difficult: sit in a chair, lean back slightly against a wall, press from shoulder height.</div>
+          </div>
+          <div class="log-panel">
+            <div class="log-panel-header">
+              <span class="log-panel-title">Log Your Sets</span>
+              <span class="prev-weight-badge" id="prev-a2">No previous data</span>
+            </div>
+            <div class="sets-grid">
+              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="a2-s1-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="a2-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="a2-s2-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="a2-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 3</div><div class="set-inputs"><div><input class="set-input" id="a2-s3-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="a2-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+            </div>
+            <div class="effort-row"><span class="effort-label">Effort:</span><div class="effort-chips" id="effort-a2"><div class="effort-chip" onclick="selectEffort('a2',1)">1</div><div class="effort-chip" onclick="selectEffort('a2',2)">2</div><div class="effort-chip" onclick="selectEffort('a2',3)">3</div><div class="effort-chip" onclick="selectEffort('a2',4)">4</div><div class="effort-chip" onclick="selectEffort('a2',5)">5</div><div class="effort-chip" onclick="selectEffort('a2',6)">6</div><div class="effort-chip" onclick="selectEffort('a2',7)">7</div><div class="effort-chip" onclick="selectEffort('a2',8)">8</div><div class="effort-chip" onclick="selectEffort('a2',9)">9</div></div></div>
+            <button class="save-set-btn" id="save-a2" onclick="saveExercise('a2')">Save Chest Press</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE A3: BAND PULL-APART -->
+      <div class="exercise-block">
+        <div class="exercise-header" style="background: linear-gradient(90deg, #1B5E20, #2E7D32);">
+          <span class="ex-num">A3</span>
+          <span class="ex-name">Band Pull-Apart</span>
+          <span class="ex-meta">2 sets · 12-15 reps · 45s rest</span>
+        </div>
+        <div class="exercise-body">
+          <button class="instructions-toggle" onclick="toggleInstructions('a3')">How to do it <span class="chevron">▼</span></button>
+          <div class="instructions-content" id="instr-a3">
+            <div class="why-note">Replaces lateral raise. Band pull-aparts provide the same shoulder health benefit with significantly lower impingement risk — a better choice for this age group.</div>
+            <div class="instruction-step"><span class="step-num">1</span><span>Hold a light resistance band with both hands at chest height, shoulder-width apart, palms facing down.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>With arms nearly straight, pull the band apart by moving both hands outward and back — as if trying to touch your elbows behind you.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>Squeeze your shoulder blades together at the end. Hold one second.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>Slowly return to start, keeping band under tension throughout.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>No band? Hold a light dumbbell in each hand, hinge slightly forward at hips, and perform a reverse fly — same arm motion, using gravity.</span></div>
+            <div class="safety-tip"><strong>Feel it in:</strong> back of shoulders and between shoulder blades. If you feel it in your neck, lower the band slightly. Increase by switching to a slightly heavier band when 15 reps feels easy.</div>
+          </div>
+          <div class="log-panel">
+            <div class="log-panel-header">
+              <span class="log-panel-title">Log Your Sets</span>
+              <span class="prev-weight-badge" id="prev-a3">No previous data</span>
+            </div>
+            <div class="sets-grid">
+              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="a3-s1-w" type="text" placeholder="band"><div class="input-mini-label">band</div></div><div><input class="set-input" id="a3-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="a3-s2-w" type="text" placeholder="band"><div class="input-mini-label">band</div></div><div><input class="set-input" id="a3-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 3 (optional)</div><div class="set-inputs"><div><input class="set-input" id="a3-s3-w" type="text" placeholder="band"><div class="input-mini-label">band</div></div><div><input class="set-input" id="a3-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+            </div>
+            <div class="effort-row"><span class="effort-label">Effort:</span><div class="effort-chips" id="effort-a3"><div class="effort-chip" onclick="selectEffort('a3',1)">1</div><div class="effort-chip" onclick="selectEffort('a3',2)">2</div><div class="effort-chip" onclick="selectEffort('a3',3)">3</div><div class="effort-chip" onclick="selectEffort('a3',4)">4</div><div class="effort-chip" onclick="selectEffort('a3',5)">5</div><div class="effort-chip" onclick="selectEffort('a3',6)">6</div><div class="effort-chip" onclick="selectEffort('a3',7)">7</div><div class="effort-chip" onclick="selectEffort('a3',8)">8</div><div class="effort-chip" onclick="selectEffort('a3',9)">9</div></div></div>
+            <button class="save-set-btn" id="save-a3" onclick="saveExercise('a3')">Save Band Pull-Apart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE A4: CALF RAISE -->
+      <div class="exercise-block">
+        <div class="exercise-header" style="background: linear-gradient(90deg, #1B3A6B, #2E6B8B);">
+          <span class="ex-num">A4</span>
+          <span class="ex-name">Calf Raise</span>
+          <span class="ex-meta">3 sets · 15 reps · 60s rest</span>
+        </div>
+        <div class="exercise-body">
+          <button class="instructions-toggle" onclick="toggleInstructions('a4')">How to do it <span class="chevron">▼</span></button>
+          <div class="instructions-content" id="instr-a4">
+            <div class="instruction-step"><span class="step-num">1</span><span>Stand behind a sturdy chair or counter. Rest fingertips on surface for balance only — do not grip or push down.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Feet hip-width apart, toes pointing straight forward.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>Slowly rise onto tiptoes, as high as you can.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>Pause at the top for one full second. This builds ankle stability.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>Slowly lower over 2-3 seconds. Do not let heels drop.</span></div>
+            <div class="instruction-step"><span class="step-num">6</span><span>Progression: once 3 sets of 15 feels easy, try single-leg calf raises — lift one foot slightly and do all reps on one leg.</span></div>
+            <div class="safety-tip"><strong>Note:</strong> Strong calves and ankles are among the most overlooked components of fall prevention. The slow lowering is where much of the benefit occurs — do not rush it.</div>
+          </div>
+          <div class="log-panel">
+            <div class="log-panel-header">
+              <span class="log-panel-title">Log Your Sets</span>
+              <span class="prev-weight-badge" id="prev-a4">No previous data</span>
+            </div>
+            <div class="sets-grid">
+              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="a4-s1-w" type="text" placeholder="BW/1-leg"><div class="input-mini-label">weight</div></div><div><input class="set-input" id="a4-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="a4-s2-w" type="text" placeholder="BW/1-leg"><div class="input-mini-label">weight</div></div><div><input class="set-input" id="a4-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 3</div><div class="set-inputs"><div><input class="set-input" id="a4-s3-w" type="text" placeholder="BW/1-leg"><div class="input-mini-label">weight</div></div><div><input class="set-input" id="a4-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+            </div>
+            <div class="effort-row"><span class="effort-label">Effort:</span><div class="effort-chips" id="effort-a4"><div class="effort-chip" onclick="selectEffort('a4',1)">1</div><div class="effort-chip" onclick="selectEffort('a4',2)">2</div><div class="effort-chip" onclick="selectEffort('a4',3)">3</div><div class="effort-chip" onclick="selectEffort('a4',4)">4</div><div class="effort-chip" onclick="selectEffort('a4',5)">5</div><div class="effort-chip" onclick="selectEffort('a4',6)">6</div><div class="effort-chip" onclick="selectEffort('a4',7)">7</div><div class="effort-chip" onclick="selectEffort('a4',8)">8</div><div class="effort-chip" onclick="selectEffort('a4',9)">9</div></div></div>
+            <button class="save-set-btn" id="save-a4" onclick="saveExercise('a4')">Save Calf Raise</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE A5: BALANCE CIRCUIT -->
+      <div class="card">
+        <div class="card-header" style="background: linear-gradient(90deg, #4A148C, #7B1FA2);">
+          <span class="card-title" style="color:#fff; font-family: var(--serif);">A5 · Balance Circuit</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15); color:#fff; border:none;">2 rounds · 30s rest between exercises</span>
+        </div>
+        <div class="card-body">
+          <p class="body-text"><strong>Structure:</strong> Do Exercise 1 → rest 30s → Exercise 2 → rest 30s → Exercise 3 → rest 60s → repeat round.</p>
+          <div style="margin-bottom:14px">
+            <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 1: Tandem Stance — 20-30 seconds each foot</h4>
+            <p style="font-size:0.85rem; color:#445566; line-height:1.55; margin-bottom:8px;">Stand near a chair. One foot directly in front of the other, heel touching toe. Fix gaze on a point straight ahead — stable gaze dramatically improves balance. Hold 20-30 seconds each foot.</p>
+            <p style="font-size:0.82rem; color:var(--teal); font-style:italic;">Too easy: close eyes for 5-second intervals. Too hard: widen stance slightly.</p>
+          </div>
+          <div style="margin-bottom:14px">
+            <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 2: Single-Leg Stand — 20-30 seconds each side</h4>
+            <p style="font-size:0.85rem; color:#445566; line-height:1.55; margin-bottom:8px;">Fingertips on chair only. Lift one foot slightly off the floor. Fix your gaze. Hold 20-30 seconds. Switch.</p>
+            <p style="font-size:0.82rem; color:var(--teal); font-style:italic;">Progression: two-finger → one-finger → hover → no touch. Move only when current level feels controlled.</p>
+          </div>
+          <div style="margin-bottom:14px">
+            <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 3: Weight Shifts — 10 reps each direction</h4>
+            <p style="font-size:0.85rem; color:#445566; line-height:1.55; margin-bottom:8px;">Hands lightly on chair. Slowly shift weight to right foot until left foot lightens. Hold 3 seconds. Shift left. Repeat.</p>
+            <p style="font-size:0.82rem; color:var(--teal); font-style:italic;">Progress to actually lifting the unloaded foot 1-2 inches off the ground.</p>
+          </div>
+          <div class="safety-tip"><strong>Safety rule:</strong> Always have a chair, wall, or counter within one arm's reach. Touch support the instant you feel unsteady. There is no benefit to falling.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── PAGE: DAY B ─────────────────────────────────────── -->
+    <section class="page" id="page-day-b">
+
+      <div class="page-header green">
+        <div class="page-title">Day B — Saturday</div>
+        <div class="page-subtitle">Posterior Chain · Upper Pull · Core Stability  ·  ~38 minutes</div>
+      </div>
+
+      <div class="week-nav">
+        <button class="week-nav-btn" id="prev-week-b" onclick="changeWeek(-1)">← Prev</button>
+        <div class="week-nav-info">
+          <div class="week-nav-num" id="week-display-b">Week 1</div>
+          <div class="week-nav-phase" id="phase-display-b">Foundation · Learn</div>
+        </div>
+        <button class="week-nav-btn" id="next-week-b" onclick="changeWeek(1)">Next →</button>
+      </div>
+
+      <div id="deload-banner-b" class="deload-banner" style="display:none">
+        ⚠️ DELOAD WEEK — Reduce all weights by 20%. Do only 2 sets per exercise. Focus on perfect form.
+      </div>
+
+      <!-- WARM-UP B -->
+      <button class="warmup-toggle" onclick="toggleWarmup('b')">
+        ▶ DAY B WARM-UP — 8 minutes (tap to expand) <span class="chevron">▼</span>
+      </button>
+      <div class="warmup-content" id="warmup-b">
+        <div class="warmup-step"><div class="warmup-num">1</div><div><h4>March in Place — 2 minutes</h4><p>Same as Day A. Begin every session here.</p></div></div>
+        <div class="warmup-step"><div class="warmup-num">2</div><div><h4>Cat-Cow — 10 slow reps</h4><p>On hands and knees. Arch back upward like a cat (chin to chest), hold 2s. Lower belly toward floor, lift head and tailbone (cow), hold 2s. Alternate 10 times. Mobilizes thoracic spine before rowing.</p></div></div>
+        <div class="warmup-step"><div class="warmup-num">3</div><div><h4>Hip Hinge Practice — 8 slow reps (no weight)</h4><p>Feet hip-width, hands on lower back. Push hips straight back, keeping back flat, until you feel a slight hamstring stretch. Return to standing. Warms the exact movement you'll load with the RDL.</p></div></div>
+        <div class="warmup-step"><div class="warmup-num">4</div><div><h4>Thoracic Rotation — 8 each side</h4><p>Sit in a chair, feet flat, arms crossed over chest. Keeping hips forward, rotate upper body to the right as far as comfortable. Hold 2s. Return. Rotate left. Prepares upper back for rowing.</p></div></div>
+        <div class="warmup-step"><div class="warmup-num">5</div><div><h4>Hamstring Stretch — 20 seconds each side</h4><p>Sit on edge of chair. Extend one leg straight, heel on floor, toes up. Sit tall and lean very slightly forward from your hip (not waist) until you feel a gentle stretch behind the knee. Hold 20s. Switch.</p></div></div>
+      </div>
+
+      <!-- EXERCISE B1: RDL -->
+      <div class="exercise-block">
+        <div class="exercise-header" style="background: linear-gradient(90deg, #1B5E20, #2E7D32);">
+          <span class="ex-num">B1</span>
+          <span class="ex-name">Romanian Deadlift (RDL)</span>
+          <span class="ex-meta">3 sets · 10-12 reps · 75s rest</span>
+        </div>
+        <div class="exercise-body">
+          <button class="instructions-toggle" onclick="toggleInstructions('b1')">How to do it <span class="chevron">▼</span></button>
+          <div class="instructions-content" id="instr-b1">
+            <div class="instruction-step"><span class="step-num">1</span><span>Stand feet hip-width, dumbbells held in front of thighs, palms facing body.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Breathe in. Brace core gently — like bracing for a light tap to the stomach.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>With a very slight knee bend (stays fixed), push hips STRAIGHT BACK. This is a hinge, not a squat. Imagine a rope pulling you backward from the waist.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>Dumbbells travel straight down the front of your legs, close to your body throughout.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>Lower until you feel a distinct hamstring stretch — usually mid-shin. STOP. Do not round your lower back.</span></div>
+            <div class="instruction-step"><span class="step-num">6</span><span>Drive hips forward to standing, squeezing glutes as you rise. Exhale as you stand.</span></div>
+            <div class="instruction-step"><span class="step-num">7</span><span>Stand fully tall, shoulders back, before the next rep.</span></div>
+            <div class="safety-tip"><strong>Safety:</strong> This is the most important exercise for fall prevention. If your lower back hurts, you are rounding your back or going too deep. Reduce range of motion — only hinge as far as your back stays completely flat.</div>
+          </div>
+          <div class="log-panel">
+            <div class="log-panel-header">
+              <span class="log-panel-title">Log Your Sets</span>
+              <span class="prev-weight-badge" id="prev-b1">No previous data</span>
+            </div>
+            <div class="sets-grid">
+              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="b1-s1-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b1-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="b1-s2-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b1-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 3</div><div class="set-inputs"><div><input class="set-input" id="b1-s3-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b1-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+            </div>
+            <div class="effort-row"><span class="effort-label">Effort:</span><div class="effort-chips" id="effort-b1"><div class="effort-chip" onclick="selectEffort('b1',1)">1</div><div class="effort-chip" onclick="selectEffort('b1',2)">2</div><div class="effort-chip" onclick="selectEffort('b1',3)">3</div><div class="effort-chip" onclick="selectEffort('b1',4)">4</div><div class="effort-chip" onclick="selectEffort('b1',5)">5</div><div class="effort-chip" onclick="selectEffort('b1',6)">6</div><div class="effort-chip" onclick="selectEffort('b1',7)">7</div><div class="effort-chip" onclick="selectEffort('b1',8)">8</div><div class="effort-chip" onclick="selectEffort('b1',9)">9</div></div></div>
+            <button class="save-set-btn" id="save-b1" onclick="saveExercise('b1')">Save RDL</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE B2: BICEP CURL -->
+      <div class="exercise-block">
+        <div class="exercise-header" style="background: linear-gradient(90deg, #1B3A6B, #2E8B8B);">
+          <span class="ex-num">B2</span>
+          <span class="ex-name">Bicep Curl</span>
+          <span class="ex-meta">3 sets · 10-12 reps · 60s rest</span>
+        </div>
+        <div class="exercise-body">
+          <button class="instructions-toggle" onclick="toggleInstructions('b2')">How to do it <span class="chevron">▼</span></button>
+          <div class="instructions-content" id="instr-b2">
+            <div class="instruction-step"><span class="step-num">1</span><span>Stand feet shoulder-width, dumbbells at sides, palms facing forward.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Press upper arms gently against your sides and keep them there. Elbows are the only joint that moves.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>Keeping upper arm completely still, curl the dumbbell toward your shoulder.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>At top, rotate wrist slightly — little finger closest to shoulder. Pause one second.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>Slowly lower over 2-3 seconds. Do not drop the weight — the lowering builds strength.</span></div>
+            <div class="instruction-step"><span class="step-num">6</span><span>Alternate arms for better form control.</span></div>
+            <div class="safety-tip"><strong>Common error:</strong> swinging the torso backward to get the weight up. If your body rocks at all, reduce weight. The jump from 8 lbs to 10 lbs is a 25% increase — take it only when 8 lbs is genuinely easy for all sets. Max increase: 1-2 lbs at a time.</div>
+          </div>
+          <div class="log-panel">
+            <div class="log-panel-header">
+              <span class="log-panel-title">Log Your Sets</span>
+              <span class="prev-weight-badge" id="prev-b2">No previous data</span>
+            </div>
+            <div class="sets-grid">
+              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="b2-s1-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b2-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="b2-s2-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b2-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 3</div><div class="set-inputs"><div><input class="set-input" id="b2-s3-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b2-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+            </div>
+            <div class="effort-row"><span class="effort-label">Effort:</span><div class="effort-chips" id="effort-b2"><div class="effort-chip" onclick="selectEffort('b2',1)">1</div><div class="effort-chip" onclick="selectEffort('b2',2)">2</div><div class="effort-chip" onclick="selectEffort('b2',3)">3</div><div class="effort-chip" onclick="selectEffort('b2',4)">4</div><div class="effort-chip" onclick="selectEffort('b2',5)">5</div><div class="effort-chip" onclick="selectEffort('b2',6)">6</div><div class="effort-chip" onclick="selectEffort('b2',7)">7</div><div class="effort-chip" onclick="selectEffort('b2',8)">8</div><div class="effort-chip" onclick="selectEffort('b2',9)">9</div></div></div>
+            <button class="save-set-btn" id="save-b2" onclick="saveExercise('b2')">Save Bicep Curl</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE B3: TRICEP KICKBACK -->
+      <div class="exercise-block">
+        <div class="exercise-header" style="background: linear-gradient(90deg, #1B3A6B, #2E5F8B);">
+          <span class="ex-num">B3</span>
+          <span class="ex-name">Tricep Kickback</span>
+          <span class="ex-meta">3 sets · 10-12 reps each arm · 60s rest</span>
+        </div>
+        <div class="exercise-body">
+          <button class="instructions-toggle" onclick="toggleInstructions('b3')">How to do it <span class="chevron">▼</span></button>
+          <div class="instructions-content" id="instr-b3">
+            <div class="why-note">Kickback replaces overhead extension. Same tricep training, zero shoulder stress — a better default for this age group. Overhead extension can compress shoulder structures.</div>
+            <div class="instruction-step"><span class="step-num">1</span><span>Stand next to a sturdy chair. Left hand flat on surface for support. Dumbbell in right hand.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Hinge forward slightly at hips — torso at roughly 45°. Same hip hinge from the RDL, but partial.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>Tuck right upper arm firmly against your side, elbow bent 90°. Upper arm does not move.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>Extend elbow until arm is completely straight behind you. Pause one second.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>Slowly bend the elbow to return. Control it for 2 seconds — do not let forearm drop.</span></div>
+            <div class="instruction-step"><span class="step-num">6</span><span>Complete all reps on right arm. Switch: right hand on surface, left arm works.</span></div>
+            <div class="safety-tip"><strong>Feel it in:</strong> back of the upper arm only — not shoulder or elbow joint. Tricep strength is what lets you push up from chairs, beds, and the floor.</div>
+          </div>
+          <div class="log-panel">
+            <div class="log-panel-header">
+              <span class="log-panel-title">Log Your Sets</span>
+              <span class="prev-weight-badge" id="prev-b3">No previous data</span>
+            </div>
+            <div class="sets-grid">
+              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="b3-s1-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b3-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="b3-s2-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b3-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 3</div><div class="set-inputs"><div><input class="set-input" id="b3-s3-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b3-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+            </div>
+            <div class="effort-row"><span class="effort-label">Effort:</span><div class="effort-chips" id="effort-b3"><div class="effort-chip" onclick="selectEffort('b3',1)">1</div><div class="effort-chip" onclick="selectEffort('b3',2)">2</div><div class="effort-chip" onclick="selectEffort('b3',3)">3</div><div class="effort-chip" onclick="selectEffort('b3',4)">4</div><div class="effort-chip" onclick="selectEffort('b3',5)">5</div><div class="effort-chip" onclick="selectEffort('b3',6)">6</div><div class="effort-chip" onclick="selectEffort('b3',7)">7</div><div class="effort-chip" onclick="selectEffort('b3',8)">8</div><div class="effort-chip" onclick="selectEffort('b3',9)">9</div></div></div>
+            <button class="save-set-btn" id="save-b3" onclick="saveExercise('b3')">Save Tricep Kickback</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE B4: BENT-OVER ROW -->
+      <div class="exercise-block">
+        <div class="exercise-header" style="background: linear-gradient(90deg, #2E5E3E, #3E7E4E);">
+          <span class="ex-num">B4</span>
+          <span class="ex-name">Bent-Over Row</span>
+          <span class="ex-meta">3 sets · 10-12 reps · 75s rest</span>
+        </div>
+        <div class="exercise-body">
+          <button class="instructions-toggle" onclick="toggleInstructions('b4')">How to do it <span class="chevron">▼</span></button>
+          <div class="instructions-content" id="instr-b4">
+            <div class="instruction-step"><span class="step-num">1</span><span>Feet hip-width, dumbbell in each hand. Hinge at hips to ~45°. Arms hang straight down from shoulders, palms facing each other.</span></div>
+            <div class="instruction-step"><span class="step-num">2</span><span>Brace core. Breathe in. Back flat — not rounded.</span></div>
+            <div class="instruction-step"><span class="step-num">3</span><span>Pull both dumbbells toward your lower ribs, bending elbows. Imagine pushing your elbows toward the ceiling.</span></div>
+            <div class="instruction-step"><span class="step-num">4</span><span>At the top, squeeze shoulder blades firmly together. Feel it in the middle of your back — not neck or lower back.</span></div>
+            <div class="instruction-step"><span class="step-num">5</span><span>Slowly lower over 2-3 seconds. Torso stays still throughout.</span></div>
+            <div class="safety-tip"><strong>Seated modification:</strong> Sit on edge of a chair, lean forward from the hips (not waist, back stays flat), and row dumbbells up toward your sides. Equally effective. Upper back strength is your primary defense against forward-rounded posture.</div>
+          </div>
+          <div class="log-panel">
+            <div class="log-panel-header">
+              <span class="log-panel-title">Log Your Sets</span>
+              <span class="prev-weight-badge" id="prev-b4">No previous data</span>
+            </div>
+            <div class="sets-grid">
+              <div class="set-entry"><div class="set-label">Set 1</div><div class="set-inputs"><div><input class="set-input" id="b4-s1-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b4-s1-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 2</div><div class="set-inputs"><div><input class="set-input" id="b4-s2-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b4-s2-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+              <div class="set-entry"><div class="set-label">Set 3</div><div class="set-inputs"><div><input class="set-input" id="b4-s3-w" type="number" placeholder="lbs"><div class="input-mini-label">lbs</div></div><div><input class="set-input" id="b4-s3-r" type="number" placeholder="reps"><div class="input-mini-label">reps</div></div></div></div>
+            </div>
+            <div class="effort-row"><span class="effort-label">Effort:</span><div class="effort-chips" id="effort-b4"><div class="effort-chip" onclick="selectEffort('b4',1)">1</div><div class="effort-chip" onclick="selectEffort('b4',2)">2</div><div class="effort-chip" onclick="selectEffort('b4',3)">3</div><div class="effort-chip" onclick="selectEffort('b4',4)">4</div><div class="effort-chip" onclick="selectEffort('b4',5)">5</div><div class="effort-chip" onclick="selectEffort('b4',6)">6</div><div class="effort-chip" onclick="selectEffort('b4',7)">7</div><div class="effort-chip" onclick="selectEffort('b4',8)">8</div><div class="effort-chip" onclick="selectEffort('b4',9)">9</div></div></div>
+            <button class="save-set-btn" id="save-b4" onclick="saveExercise('b4')">Save Bent-Over Row</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CORE CIRCUIT B5 -->
+      <div class="card">
+        <div class="card-header" style="background: linear-gradient(90deg, #E65100, #F57C00);">
+          <span class="card-title" style="color:#fff; font-family: var(--serif);">B5 · Core & Stability Circuit</span>
+          <span class="tag" style="background:rgba(255,255,255,0.15); color:#fff; border:none;">2 rounds · 45s rest between exercises · 75s between rounds</span>
+        </div>
+        <div class="card-body">
+          <div style="margin-bottom:14px">
+            <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 1: Seated Marching — 30 seconds</h4>
+            <p style="font-size:0.85rem; color:#445566; line-height:1.55;">Sit tall in chair, feet flat, hands lightly on thighs. Lift alternate knees toward chest, one at a time. Keep back straight — do not slouch as it continues. Builds hip flexor strength essential for walking and stairs.</p>
+          </div>
+          <div style="margin-bottom:14px">
+            <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 2: Glute Bridge — 12-15 reps</h4>
+            <p style="font-size:0.85rem; color:#445566; line-height:1.55;">Lie on back, knees bent, feet flat, arms at sides. Press feet into floor and squeeze glutes to lift hips to ceiling. Straight line from shoulders to knees at top. Hold 2 seconds. Lower slowly over 2-3 seconds. Directly trains the muscles that catch you when you stumble.</p>
+          </div>
+          <div style="margin-bottom:14px">
+            <h4 style="font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:6px;">Exercise 3: Bird-Dog — 8 reps each side</h4>
+            <p style="font-size:0.85rem; color:#445566; line-height:1.55;">Hands and knees on mat, back flat like a tabletop. <strong>Key cue: press your hip bones straight down toward the floor before and throughout.</strong> Do not let the working hip rotate upward. Slowly extend right arm forward AND left leg backward, both to body height only. Hold 3 seconds. Return. Then left arm + right leg. 8 reps each side.</p>
+            <p style="font-size:0.82rem; color:var(--teal); font-style:italic; margin-top:6px;">Modification: extend one limb at a time until coordination improves.</p>
+          </div>
+          <div class="safety-tip"><strong>Bird-Dog tip:</strong> The instant you feel your lower back arch or your hip rotate up, reduce range of motion or use the modification. Quality of movement matters far more than height of limbs.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── PAGE: SCHEDULE ─────────────────────────────────── -->
+    <section class="page" id="page-schedule">
+      <div class="page-header">
+        <div class="page-title">Weekly Schedule</div>
+        <div class="page-subtitle">Built around your Thursday gym class · 48-72 hours recovery between sessions</div>
+      </div>
+
+      <div class="week-grid">
+        <div class="day-card strength-a"><div class="day-name">Mon</div><div class="day-type">Day A</div><div class="day-note">at home</div></div>
+        <div class="day-card cardio"><div class="day-name">Tue</div><div class="day-type">Zone 2</div><div class="day-note">30-40 min</div></div>
+        <div class="day-card rest"><div class="day-name">Wed</div><div class="day-type">Rest</div><div class="day-note">or gentle walk</div></div>
+        <div class="day-card gym-class"><div class="day-name">Thu</div><div class="day-type">Gym Class</div><div class="day-note">with friends</div></div>
+        <div class="day-card cardio"><div class="day-name">Fri</div><div class="day-type">Zone 2</div><div class="day-note">30-40 min</div></div>
+        <div class="day-card strength-b"><div class="day-name">Sat</div><div class="day-type">Day B</div><div class="day-note">at home</div></div>
+        <div class="day-card rest"><div class="day-name">Sun</div><div class="day-type">Rest</div><div class="day-note">or easy walk</div></div>
+      </div>
+
+      <div class="gap-row">
+        <div class="gap-badge">Mon → Thu: 72 hours recovery</div>
+        <div class="gap-badge">Thu → Sat: 48 hours recovery</div>
+        <div class="gap-badge">Sat → Mon: 48 hours recovery</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">Why This Schedule Works</span></div>
+        <div class="card-body">
+          <p class="body-text">All three home strength sessions (Mon, Thu class, Sat) are spaced at least 48 hours apart — the research-backed minimum for muscle repair in adults 65+. The old Mon/Wed/Fri pattern would leave only 24 hours between Wednesday and Friday sessions, which is insufficient for this training age.</p>
+          <p class="body-text">Your Thursday gym class counts as your third strength session. On weeks where the class is particularly heavy on legs, treat Saturday as optional — rest if you need it. Three quality sessions beats four rushed or tired ones every time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE: CARDIO ───────────────────────────────────── -->
+    <section class="page" id="page-cardio">
+      <div class="page-header" style="background: linear-gradient(135deg, #7D3800, var(--orange));">
+        <div class="page-title">Cardio Guide</div>
+        <div class="page-subtitle">How to make your 3x/week cardio work with your strength training</div>
+      </div>
+
+      <div class="cardio-zone">
+        <h3>What is Zone 2?</h3>
+        <p class="body-text">Zone 2 is steady, low-intensity aerobic work that trains your heart and metabolism without creating the deep fatigue that interferes with strength recovery.</p>
+        <p class="body-text"><strong>The talk test:</strong> You should be able to hold a full conversation while doing it. If you can only manage 3-4 word answers, slow down. Heart rate target: roughly 60-70% of max — for most women near 70, that's approximately 90-110 bpm. The conversation test is more reliable than any number.</p>
+        <p class="body-text" style="margin-bottom:0"><strong>Options:</strong> Brisk walking · Stationary bike at light resistance · Elliptical at conversational pace · Swimming at comfortable sustained stroke. Duration: 30-40 minutes. Longer than 50 minutes starts to compete with strength recovery.</p>
+      </div>
+
+      <div class="cardio-days">
+        <div class="cardio-day-card" style="background:var(--orange-lt); border-color:#e8c0a0;">
+          <h4 style="color:var(--orange)">Tuesday</h4>
+          <ul>
+            <li>Zone 2 only — 30-40 minutes</li>
+            <li>No sprints, no hills, no intensity surges</li>
+            <li>This is active recovery, not a training day</li>
+          </ul>
+        </div>
+        <div class="cardio-day-card" style="background:var(--orange-lt); border-color:#e8c0a0;">
+          <h4 style="color:var(--orange)">Friday</h4>
+          <ul>
+            <li>Zone 2 only — 30-40 minutes</li>
+            <li>Thursday was strength — Friday should feel easy</li>
+            <li>If sore from Thursday, reduce to 20-25 minutes</li>
+          </ul>
+        </div>
+        <div class="cardio-day-card" style="background:var(--teal-lt); border-color:#a8d8d8;">
+          <h4 style="color:var(--teal)">Optional 3rd Session</h4>
+          <ul>
+            <li>Zone 2 is always appropriate</li>
+            <li>Want harder effort? Wednesday works best — it sits between two rest-ish days</li>
+            <li>Avoid hard cardio Sunday — it cuts into Monday recovery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">What About Vigorous Cardio?</span></div>
+        <div class="card-body">
+          <p class="body-text">If you enjoy occasional harder effort (faster walking, hills, a light jog), Wednesday is the right day. But in Block 1, keep all cardio at Zone 2 while your body adapts to the strength program. Reassess after Week 4.</p>
+          <p class="body-text" style="margin-bottom:0">The goal of cardio in this program is cardiovascular health and active recovery — not additional fatigue. Strength sessions are where adaptation happens. Cardio supports them.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE: PROGRESS ─────────────────────────────────── -->
+    <section class="page" id="page-progress">
+      <div class="page-header gold">
+        <div class="page-title">Progress Log</div>
+        <div class="page-subtitle">Your complete training history</div>
+      </div>
+
+      <div style="display:flex; gap:12px; margin-bottom:24px; flex-wrap:wrap;">
+        <button class="download-btn" onclick="exportCSV()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download Progress as CSV
+        </button>
+        <button class="download-btn" onclick="clearAllData()" style="background:#8B1C1C;">
+          Clear All Data
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">All Logged Sessions</span></div>
+        <div class="card-body" style="padding:0;">
+          <div class="progress-table-wrap">
+            <table class="progress-table" id="progress-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Week</th>
+                  <th>Day</th>
+                  <th>Exercise</th>
+                  <th>Set 1</th>
+                  <th>Set 2</th>
+                  <th>Set 3</th>
+                  <th>Effort</th>
+                </tr>
+              </thead>
+              <tbody id="progress-tbody">
+                <tr><td colspan="8" style="text-align:center; color:#889aaa; padding:32px; font-style:italic;">No data yet. Complete your first workout to see your progress here.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE: SAFETY ───────────────────────────────────── -->
+    <section class="page" id="page-safety">
+      <div class="page-header" style="background: linear-gradient(135deg, #5a0a0a, var(--red));">
+        <div class="page-title">Know When to Stop</div>
+        <div class="page-subtitle">Understanding the difference between normal effort and warning signs</div>
+      </div>
+
+      <div class="stop-grid">
+        <div class="stop-card ok">
+          <h3>✓ Normal — Keep Going</h3>
+          <ul>
+            <li>Muscles burning or feeling fatigued</li>
+            <li>Breathing harder than usual</li>
+            <li>Sweating</li>
+            <li>Muscles feeling "pumped" or full</li>
+            <li>General tiredness after a set</li>
+          </ul>
+          <p>This is effort. It's the point.</p>
+        </div>
+        <div class="stop-card warn">
+          <h3>⚠ Caution — Reduce or Stop</h3>
+          <ul>
+            <li>Sharp pain in any joint</li>
+            <li>Lower back pain that worsens with movement</li>
+            <li>Pain that feels different from muscle burn</li>
+            <li>Any exercise reproducing a known old injury</li>
+          </ul>
+          <p>Drop weight or switch to the easier modification.</p>
+        </div>
+        <div class="stop-card danger">
+          <h3>✕ Stop Now — Seek Help</h3>
+          <ul>
+            <li>Chest pain, tightness, or pressure</li>
+            <li>Dizziness or feeling faint</li>
+            <li>Shortness of breath out of proportion to effort</li>
+            <li>Heart beating irregularly</li>
+            <li>Sudden severe pain anywhere</li>
+          </ul>
+          <p>Sit or lie down. Call someone. Do not drive yourself.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE: PROGRESSION ──────────────────────────────── -->
+    <section class="page" id="page-progression">
+      <div class="page-header">
+        <div class="page-title">Progression Guide</div>
+        <div class="page-subtitle">Week-by-week targets for Block 1</div>
+      </div>
+
+      <div class="card" style="margin-bottom:20px;">
+        <div class="card-header"><span class="card-title">Weight Increase Rules</span></div>
+        <div class="card-body">
+          <div class="info-grid">
+            <div class="info-card" style="background:var(--teal-lt); border-color:#a8d8d8;">
+              <h3>Upper Body (Chest, Bicep, Tricep, Rows)</h3>
+              <ul>
+                <li>Maximum increase: +1-2 lbs at a time</li>
+                <li>The jump from 8→10 lbs is 25% — only when 8 lbs is easy for all 3 sets</li>
+                <li>Band pull-apart: switch to heavier resistance band</li>
+              </ul>
+            </div>
+            <div class="info-card" style="background:var(--green-lt); border-color:#a8d8a8;">
+              <h3>Lower Body (Squat, RDL, Calf Raise)</h3>
+              <ul>
+                <li>Maximum increase: +2-3 lbs at a time</li>
+                <li>Calf raises: progress from two-foot to single-leg rather than adding weight</li>
+                <li>Only increase when all 3 sets feel controlled at effort 7 or below</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"><span class="card-title">Block 1 Week-by-Week</span></div>
+        <div class="card-body" style="padding:0;">
+          <div class="progress-table-wrap">
+            <table class="progress-table">
+              <thead><tr><th>Week</th><th>Phase</th><th>Strength Focus</th><th>Balance Target</th></tr></thead>
+              <tbody>
+                <tr><td><strong>1-2</strong></td><td><span class="tag tag-teal">Learn</span></td><td>Establish starting weights. Form only. Effort 5-6. When in doubt, go lighter.</td><td>Chair-supported single-leg stand for 10 seconds each side.</td></tr>
+                <tr><td><strong>3-4</strong></td><td><span class="tag tag-navy">Build</span></td><td>Add weight on any exercise where all sets felt easy (effort below 6). Effort target 6-7.</td><td>Reduce chair touch to fingertips only.</td></tr>
+                <tr><td><strong>5-6</strong></td><td><span class="tag tag-green">Push</span></td><td>Last rep of each set should be genuinely challenging — you could not do 3 more with good form. Effort 7-8.</td><td>15 seconds single-leg stand with one finger. Tandem stance 20+ seconds.</td></tr>
+                <tr><td><strong>7</strong></td><td><span class="tag tag-orange">Test</span></td><td>Try heavier weights on squat, RDL, rows. Upper body: no more than +2 lbs. Legs: +3 lbs max.</td><td>Attempt 10 seconds single-leg stand with no support. Chair within reach.</td></tr>
+                <tr><td><strong>8</strong></td><td><span class="tag" style="background:var(--red-lt);color:var(--red);border:1px solid #e0a0a0">Deload</span></td><td>Reduce ALL weights 20%. Do only 2 sets per exercise. You are recovering to come back stronger.</td><td>Balance exercises at full difficulty. This is active rest, not reduced intensity on balance.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PAGE: RECOVERY ─────────────────────────────────── -->
+    <section class="page" id="page-recovery">
+      <div class="page-header teal">
+        <div class="page-title">Recovery & Nutrition</div>
+        <div class="page-subtitle">What you do outside the gym matters as much as what you do in it</div>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Post-Workout Protein</h3>
+          <p style="font-size:0.87rem; color:#445566; margin-bottom:10px;">Eat within 30-60 minutes of finishing every strength session. Muscle protein synthesis is significantly elevated in this window — for women 65+, this window matters more than for younger adults.</p>
+          <p style="font-size:0.87rem; color:#445566; margin-bottom:10px;"><strong>Target 25-35 grams:</strong></p>
+          <ul>
+            <li>2-3 eggs + Greek yogurt (18+12g)</li>
+            <li>Cottage cheese — 1 cup = 28g</li>
+            <li>Grilled chicken breast, 3 oz = 26g</li>
+            <li>Greek yogurt + small handful of almonds</li>
+            <li>Protein shake — check label for 25g minimum</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>Sleep</h3>
+          <p style="font-size:0.87rem; color:#445566; margin-bottom:10px;">Growth hormone — which drives muscle repair — is released primarily during deep sleep. Fewer than 7 hours will limit your results more than any program detail.</p>
+          <h3 style="margin-top:16px;">Soreness</h3>
+          <p style="font-size:0.87rem; color:#445566; margin-bottom:10px;">Some soreness 24-48 hours after a new workout is normal. Respond with gentle walking, light stretching, staying warm. Do NOT train a muscle that is still significantly sore. Do NOT aggressively stretch a very sore muscle.</p>
+          <h3 style="margin-top:16px;">Hydration</h3>
+          <p style="font-size:0.87rem; color:#445566;">Older adults have a reduced thirst response — you can be meaningfully dehydrated without feeling thirsty. Drink before, during, and after every session. Target: pale yellow urine. Dark yellow means drink more.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ── STATE ──────────────────────────────────────────────────────
+let currentWeek = 1;
+const MAX_WEEK = 52;
+let effortSelections = {};
+
+const WEEK_PHASES = {
+  // Block 1: Foundation (Weeks 1-8)
+  1: 'Block 1 · Foundation · Learn',
+  2: 'Block 1 · Foundation · Learn',
+  3: 'Block 1 · Foundation · Build',
+  4: 'Block 1 · Foundation · Build',
+  5: 'Block 1 · Foundation · Push',
+  6: 'Block 1 · Foundation · Push',
+  7: 'Block 1 · Foundation · Test',
+  8: 'Block 1 · Foundation · Deload ⚠️',
+  // Block 2: Building (Weeks 9-16)
+  9:  'Block 2 · Building · Learn',
+  10: 'Block 2 · Building · Learn',
+  11: 'Block 2 · Building · Build',
+  12: 'Block 2 · Building · Build',
+  13: 'Block 2 · Building · Push',
+  14: 'Block 2 · Building · Push',
+  15: 'Block 2 · Building · Test',
+  16: 'Block 2 · Building · Deload ⚠️',
+  // Block 3: Strength Push (Weeks 17-24)
+  17: 'Block 3 · Strength Push · Learn',
+  18: 'Block 3 · Strength Push · Learn',
+  19: 'Block 3 · Strength Push · Build',
+  20: 'Block 3 · Strength Push · Build',
+  21: 'Block 3 · Strength Push · Push',
+  22: 'Block 3 · Strength Push · Push',
+  23: 'Block 3 · Strength Push · Test',
+  24: 'Block 3 · Strength Push · Deload ⚠️',
+  // Block 4: Power & Function (Weeks 25-32)
+  25: 'Block 4 · Power & Function · Learn',
+  26: 'Block 4 · Power & Function · Learn',
+  27: 'Block 4 · Power & Function · Build',
+  28: 'Block 4 · Power & Function · Build',
+  29: 'Block 4 · Power & Function · Push',
+  30: 'Block 4 · Power & Function · Push',
+  31: 'Block 4 · Power & Function · Test',
+  32: 'Block 4 · Power & Function · Deload ⚠️',
+  // Block 5: Consolidation (Weeks 33-40)
+  33: 'Block 5 · Consolidation · Learn',
+  34: 'Block 5 · Consolidation · Learn',
+  35: 'Block 5 · Consolidation · Build',
+  36: 'Block 5 · Consolidation · Build',
+  37: 'Block 5 · Consolidation · Push',
+  38: 'Block 5 · Consolidation · Push',
+  39: 'Block 5 · Consolidation · Test',
+  40: 'Block 5 · Consolidation · Deload ⚠️',
+  // Block 6: Peak & Maintain (Weeks 41-52)
+  41: 'Block 6 · Peak & Maintain · Learn',
+  42: 'Block 6 · Peak & Maintain · Learn',
+  43: 'Block 6 · Peak & Maintain · Build',
+  44: 'Block 6 · Peak & Maintain · Build',
+  45: 'Block 6 · Peak & Maintain · Push',
+  46: 'Block 6 · Peak & Maintain · Push',
+  47: 'Block 6 · Peak & Maintain · Push',
+  48: 'Block 6 · Peak & Maintain · Push',
+  49: 'Block 6 · Peak & Maintain · Test',
+  50: 'Block 6 · Peak & Maintain · Test',
+  51: 'Block 6 · Peak & Maintain · Test',
+  52: 'Block 6 · Peak & Maintain · Deload ⚠️',
+};
+
+const EXERCISE_NAMES = {
+  a1: 'Squat', a2: 'Chest Press', a3: 'Band Pull-Apart', a4: 'Calf Raise',
+  b1: 'Romanian Deadlift', b2: 'Bicep Curl', b3: 'Tricep Kickback', b4: 'Bent-Over Row'
+};
+
+// ── STORAGE KEY ────────────────────────────────────────────────
+function storageKey(exId, week) {
+  return `workout_w${week}_${exId}`;
+}
+
+// ── PAGE NAVIGATION ────────────────────────────────────────────
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const page = document.getElementById('page-' + pageId);
+  if (page) page.classList.add('active');
+  const navMap = { 'day-a': 'day-a', 'day-b': 'day-b', schedule: 'schedule', cardio: 'cardio', progress: 'progress', safety: 'info', progression: 'info', recovery: 'info' };
+  document.querySelectorAll('.nav-item').forEach(n => {
+    if (n.getAttribute('onclick') && n.getAttribute('onclick').includes(`'${pageId}'`)) n.classList.add('active');
+  });
+  if (pageId === 'progress') refreshProgressTable();
+}
+
+// ── WEEK NAVIGATION ────────────────────────────────────────────
+function changeWeek(delta) {
+  currentWeek = Math.max(1, Math.min(MAX_WEEK, currentWeek + delta));
+  updateWeekDisplay();
+  loadAllPreviousWeightBadges();
+  prefillCurrentWeekData();
+}
+
+function updateWeekDisplay() {
+  const label = `Week ${currentWeek}`;
+  const phase = WEEK_PHASES[currentWeek] || `Week ${currentWeek}`;
+  const isDeload = [8, 16, 24, 32, 40, 52].includes(currentWeek);
+
+  ['a','b'].forEach(day => {
+    const wd = document.getElementById(`week-display-${day}`);
+    const pd = document.getElementById(`phase-display-${day}`);
+    const db = document.getElementById(`deload-banner-${day}`);
+    if (wd) wd.textContent = label;
+    if (pd) pd.textContent = phase;
+    if (db) db.style.display = isDeload ? 'flex' : 'none';
+    const prev = document.getElementById(`prev-week-${day}`);
+    const next = document.getElementById(`next-week-${day}`);
+    if (prev) prev.disabled = currentWeek <= 1;
+    if (next) next.disabled = currentWeek >= MAX_WEEK;
+  });
+
+  document.getElementById('topbar-week-label').textContent = `Week ${currentWeek}`;
+}
+
+// ── EFFORT CHIPS ───────────────────────────────────────────────
+function selectEffort(exId, value) {
+  effortSelections[exId] = value;
+  const container = document.getElementById('effort-' + exId);
+  if (!container) return;
+  container.querySelectorAll('.effort-chip').forEach(chip => {
+    chip.classList.remove('selected-low', 'selected-mid', 'selected-high');
+  });
+  const chips = container.querySelectorAll('.effort-chip');
+  const chip = chips[value - 1];
+  if (chip) {
+    if (value <= 4) chip.classList.add('selected-low');
+    else if (value <= 6) chip.classList.add('selected-mid');
+    else chip.classList.add('selected-high');
+  }
+}
+
+// ── SAVE EXERCISE ──────────────────────────────────────────────
+function saveExercise(exId) {
+  const sets = [];
+  for (let s = 1; s <= 3; s++) {
+    const w = document.getElementById(`${exId}-s${s}-w`);
+    const r = document.getElementById(`${exId}-s${s}-r`);
+    if (w && r && (w.value || r.value)) {
+      sets.push({ weight: w.value || '', reps: r.value || '' });
+    } else {
+      sets.push({ weight: '', reps: '' });
+    }
+  }
+
+  const effort = effortSelections[exId] || '';
+  const record = {
+    date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+    week: currentWeek,
+    day: exId.startsWith('a') ? 'Day A' : 'Day B',
+    exercise: EXERCISE_NAMES[exId],
+    sets,
+    effort,
+    ts: Date.now()
+  };
+
+  // Store per exercise per week (for previous-week display)
+  localStorage.setItem(storageKey(exId, currentWeek), JSON.stringify(record));
+
+  // Store in running log
+  const logKey = 'workout_log';
+  let log = JSON.parse(localStorage.getItem(logKey) || '[]');
+  // Replace if same week+exercise already exists
+  const idx = log.findIndex(r => r.week === currentWeek && r.exercise === EXERCISE_NAMES[exId]);
+  if (idx >= 0) log[idx] = record; else log.push(record);
+  localStorage.setItem(logKey, JSON.stringify(log));
+
+  // Animate button
+  const btn = document.getElementById('save-' + exId);
+  if (btn) {
+    btn.classList.add('saved');
+    btn.textContent = '✓ Saved!';
+    setTimeout(() => { btn.classList.remove('saved'); btn.textContent = 'Save ' + EXERCISE_NAMES[exId]; }, 2000);
+  }
+
+  // Update prev badge for next week
+  loadAllPreviousWeightBadges();
+
+  showToast('Saved ' + EXERCISE_NAMES[exId] + ' for Week ' + currentWeek);
+}
+
+// ── PREVIOUS WEEK BADGE ────────────────────────────────────────
+function getPrevWeekSummary(exId, week) {
+  if (week <= 1) return null;
+  const prev = localStorage.getItem(storageKey(exId, week - 1));
+  if (!prev) return null;
+  const record = JSON.parse(prev);
+  // Find heaviest weight in set 1 (most representative)
+  const s1 = record.sets && record.sets[0];
+  if (s1 && s1.weight) {
+    const repsStr = s1.reps ? ` × ${s1.reps}` : '';
+    return `Wk${week-1}: ${s1.weight}${repsStr}`;
+  }
+  return null;
+}
+
+function loadAllPreviousWeightBadges() {
+  Object.keys(EXERCISE_NAMES).forEach(exId => {
+    const badge = document.getElementById('prev-' + exId);
+    if (!badge) return;
+    const summary = getPrevWeekSummary(exId, currentWeek);
+    if (summary) {
+      badge.textContent = summary;
+      badge.classList.remove('empty');
+    } else {
+      badge.textContent = 'No previous data';
+      badge.classList.add('empty');
+    }
+  });
+}
+
+// ── PREFILL CURRENT WEEK (if already saved) ────────────────────
+function prefillCurrentWeekData() {
+  Object.keys(EXERCISE_NAMES).forEach(exId => {
+    const saved = localStorage.getItem(storageKey(exId, currentWeek));
+    if (!saved) return;
+    const record = JSON.parse(saved);
+    for (let s = 1; s <= 3; s++) {
+      const setData = record.sets && record.sets[s-1];
+      const wEl = document.getElementById(`${exId}-s${s}-w`);
+      const rEl = document.getElementById(`${exId}-s${s}-r`);
+      if (wEl && setData) wEl.value = setData.weight || '';
+      if (rEl && setData) rEl.value = setData.reps || '';
+    }
+    if (record.effort) selectEffort(exId, record.effort);
+  });
+}
+
+// ── PROGRESS TABLE ─────────────────────────────────────────────
+function refreshProgressTable() {
+  const tbody = document.getElementById('progress-tbody');
+  if (!tbody) return;
+  const log = JSON.parse(localStorage.getItem('workout_log') || '[]');
+  if (log.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; color:#889aaa; padding:32px; font-style:italic;">No data yet. Complete your first workout to see your progress here.</td></tr>';
+    return;
+  }
+  const sorted = [...log].sort((a,b) => (b.ts||0) - (a.ts||0));
+  tbody.innerHTML = sorted.map(r => {
+    const s = (i) => r.sets && r.sets[i] ? `${r.sets[i].weight||'–'} × ${r.sets[i].reps||'–'}` : '–';
+    const effortClass = r.effort <= 4 ? 'low' : r.effort <= 6 ? 'mid' : 'high';
+    return `<tr>
+      <td>${r.date||'–'}</td>
+      <td>Week ${r.week||'–'}</td>
+      <td>${r.day||'–'}</td>
+      <td><strong>${r.exercise||'–'}</strong></td>
+      <td class="weight-cell">${s(0)}</td>
+      <td class="weight-cell">${s(1)}</td>
+      <td class="weight-cell">${s(2)}</td>
+      <td class="effort-cell ${effortClass}">${r.effort ? r.effort + '/9' : '–'}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── EXPORT CSV ─────────────────────────────────────────────────
+function exportCSV() {
+  const log = JSON.parse(localStorage.getItem('workout_log') || '[]');
+  if (log.length === 0) { showToast('No data to export yet.'); return; }
+  const headers = ['Date','Week','Day','Exercise','Set1_Weight','Set1_Reps','Set2_Weight','Set2_Reps','Set3_Weight','Set3_Reps','Effort'];
+  const rows = log.sort((a,b) => (a.ts||0)-(b.ts||0)).map(r => {
+    const s = (i,f) => r.sets && r.sets[i] ? (r.sets[i][f]||'') : '';
+    return [r.date||'',r.week||'',r.day||'',r.exercise||'',s(0,'weight'),s(0,'reps'),s(1,'weight'),s(1,'reps'),s(2,'weight'),s(2,'reps'),r.effort||''].join(',');
+  });
+  const csv = [headers.join(','), ...rows].join('\n');
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `workout-progress-${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Progress exported as CSV');
+}
+
+// ── CLEAR DATA ─────────────────────────────────────────────────
+function clearAllData() {
+  if (!confirm('Clear all logged workout data? This cannot be undone.')) return;
+  Object.keys(localStorage).filter(k => k.startsWith('workout_')).forEach(k => localStorage.removeItem(k));
+  effortSelections = {};
+  refreshProgressTable();
+  loadAllPreviousWeightBadges();
+  showToast('All data cleared.');
+}
+
+// ── TOGGLES ────────────────────────────────────────────────────
+function toggleWarmup(day) {
+  const btn = document.querySelector(`button[onclick="toggleWarmup('${day}')"]`);
+  const content = document.getElementById('warmup-' + day);
+  if (!btn || !content) return;
+  const isOpen = content.classList.contains('open');
+  content.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
+
+function toggleInstructions(exId) {
+  const btn = document.querySelector(`button[onclick="toggleInstructions('${exId}')"]`);
+  const content = document.getElementById('instr-' + exId);
+  if (!btn || !content) return;
+  const isOpen = content.classList.contains('open');
+  content.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+}
+
+// ── TOAST ──────────────────────────────────────────────────────
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+// ── INIT ───────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  updateWeekDisplay();
+  loadAllPreviousWeightBadges();
+  prefillCurrentWeekData();
+});
+</script>
+</body>
+</html>
